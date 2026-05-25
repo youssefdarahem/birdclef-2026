@@ -1,0 +1,235 @@
+class,ap,precision,recall,n_positive,scientific_name,common_name,class_name
+1161364,,,,0,Guyalna cuta,Guyalna cuta,Insecta
+116570,1.0,1.0,0.2,10,Caiman yacare,Southern Spectacled Caiman,Reptilia
+1176823,,,,0,Leptodactylus luctator,Wrestler Frog,Amphibia
+1491113,0.9999999999999998,1.0,0.5,28,Adenomera guarani,Guaraní leaf-litter frog,Amphibia
+1595929,,,,0,Lysapsus limellum,Uruguay Harlequin Frog,Amphibia
+209233,,,,0,Equus caballus,Feral Horse,Mammalia
+22930,,,,0,Leptodactylus syphax,Basin White-lipped Frog,Amphibia
+22956,,,,0,Leptodactylus mystacinus,Mustached Frog,Amphibia
+22961,1.0,1.0,1.0,24,Leptodactylus podicipinus,Pointedbelly Frog,Amphibia
+22967,1.0,1.0,1.0,24,Leptodactylus elenae,Marbled White-lipped Frog,Amphibia
+22973,1.0,1.0,0.9444444444444444,72,Leptodactylus fuscus,Whistling Grass Frog,Amphibia
+22983,,,,0,Leptodactylus labyrinthicus,Pepper Frog,Amphibia
+22985,,,,0,Leptodactylus petersii,Peter's Jungle Frog,Amphibia
+23150,,,,0,Physalaemus centralis,Central Dwarf Frog,Amphibia
+23154,,,,0,Physalaemus albifrons,Bahia Dwarf Frog,Amphibia
+23158,1.0,1.0,1.0,96,Physalaemus albonotatus,Pale-legged Weeping Frog,Amphibia
+23176,,,,0,Pseudopaludicola mystacalis,Cope's Swamp Froglet,Amphibia
+23724,,,,0,Phyllomedusa sauvagii,Waxy Monkey Tree Frog,Amphibia
+24279,1.0,1.0,0.9722222222222222,72,Scinax nasicus,Lesser Snouted Tree Frog,Amphibia
+24285,,,,0,Scinax fuscovarius,Snouted Tree Frog,Amphibia
+24287,,,,0,Scinax fuscomarginatus,Brown-bordered Snouted Tree Frog,Amphibia
+24321,0.827138915006562,1.0,0.6190476190476191,42,Scinax acuminatus,Mato Grosso Snouted Tree Frog,Amphibia
+244024,,,,0,Quesada gigas,Giant Cicada,Insecta
+25073,0.08942770575393946,0.0,0.0,24,Chiasmocleis mehelyi,Chiasmocleis mehelyi,Amphibia
+25092,0.9999999999999999,1.0,1.0,20,Elachistocleis bicolor,Two-colored oval frog,Amphibia
+25214,,,,0,Dermatonotus muelleri,Muller's Termite Frog,Amphibia
+326272,0.22801705634063746,0.0,0.0,24,Physalaemus biligonigerus,Weeping Frog,Amphibia
+41970,,,,0,Panthera onca,Jaguar,Mammalia
+43435,,,,0,Alouatta caraya,Black Howling Monkey,Mammalia
+47144,1.0,0.6666666666666666,1.0,4,Canis familiaris,Domestic Dog,Mammalia
+47158son01,0.9999999999999999,1.0,1.0,24,Insect son01,Insect sonotype01,Insecta
+47158son02,,,,0,Insect son02,Insect sonotype02,Insecta
+47158son03,1.0,1.0,0.16666666666666666,24,Insect son03,Insect sonotype03,Insecta
+47158son04,0.13363095238095238,0.0,0.0,8,Insect son04,Insect sonotype04,Insecta
+47158son05,0.018205892088712344,0.0,0.0,4,Insect son05,Insect sonotype05,Insecta
+47158son06,,,,0,Insect son06,Insect sonotype06,Insecta
+47158son07,1.0,1.0,0.9583333333333334,48,Insect son07,Insect sonotype07,Insecta
+47158son08,1.0,1.0,0.6,10,Insect son08,Insect sonotype08,Insecta
+47158son09,,,,0,Insect son09,Insect sonotype09,Insecta
+47158son10,,,,0,Insect son10,Insect sonotype10,Insecta
+47158son11,0.21915399163853772,0.0,0.0,24,Insect son11,Insect sonotype11,Insecta
+47158son12,,,,0,Insect son12,Insect sonotype12,Insecta
+47158son13,0.6498410540643544,1.0,0.5,48,Insect son13,Insect sonotype13,Insecta
+47158son14,,,,0,Insect son14,Insect sonotype14,Insecta
+47158son15,,,,0,Insect son15,Insect sonotype15,Insecta
+47158son16,,,,0,Insect son16,Insect sonotype16,Insecta
+47158son17,1.0000000000000002,1.0,0.2222222222222222,18,Insect son17,Insect sonotype17,Insecta
+47158son18,1.0,1.0,0.16666666666666666,24,Insect son18,Insect sonotype18,Insecta
+47158son19,1.0,1.0,1.0,2,Insect son19,Insect sonotype19,Insecta
+47158son20,,,,0,Insect son20,Insect sonotype20,Insecta
+47158son21,1.0,1.0,1.0,22,Insect son21,Insect sonotype21,Insecta
+47158son22,1.0,1.0,1.0,24,Insect son22,Insect sonotype22,Insecta
+47158son23,1.0,1.0,1.0,24,Insect son23,Insect sonotype23,Insecta
+47158son24,0.08932429377910334,0.0,0.0,24,Insect son24,Insect sonotype24,Insecta
+47158son25,1.0,1.0,0.9166666666666666,24,Insect son25,Insect sonotype25,Insecta
+476521,,,,0,Physalaemus nattereri,Cuyaba Dwarf Frog,Amphibia
+516975,,,,0,Sapajus cay,Hooded Capuchin,Mammalia
+517063,1.0,1.0,0.18,100,Pithecopus azureus,Southern Orange-legged Leaf Frog,Amphibia
+555123,,,,0,Boana lundii,Usina Tree Frog,Amphibia
+555145,,,,0,Boana punctata,Polka-dot Tree Frog,Amphibia
+555146,1.0,1.0,1.0,72,Boana raniceps,Chaco Tree Frog,Amphibia
+64898,,,,0,Ameerega picta,Yungas de la Paz Poison Frog,Amphibia
+65377,,,,0,Dendropsophus minutus,Lesser Tree Frog,Amphibia
+65380,1.0,1.0,0.8571428571428571,98,Dendropsophus nanus,Dwarf Tree Frog,Amphibia
+66971,1.0,1.0,0.9444444444444444,36,Pseudis platensis,Paraguayan Swimming Frog,Amphibia
+67107,0.20035642650675278,0.0,0.0,18,Rhinella diptycha,Rococo Toad,Amphibia
+67252,,,,0,Trachycephalus typhonius,Milk Frog,Amphibia
+70711,,,,0,Leptodactylus macrosternum,Cei's White-lipped Frog,Amphibia
+738183,,,,0,Plecturocebus pallescens,White-coated Titi,Mammalia
+74113,,,,0,Bos taurus,Highland,Mammalia
+74580,,,,0,Mico melanurus,Black-tailed Marmoset,Mammalia
+760266,,,,0,Prionacris erosa,Prionacris erosa,Insecta
+ashgre1,,,,0,Hylophilus pectoralis,Ashy-headed Greenlet,Aves
+astcra1,,,,0,Mustelirallus albicollis,Ash-throated Crake,Aves
+bafcur1,,,,0,Crax fasciolata,Bare-faced Curassow,Aves
+baffal1,,,,0,Micrastur ruficollis,Barred Forest-Falcon,Aves
+banana,,,,0,Coereba flaveola,Bananaquit,Aves
+barant1,,,,0,Thamnophilus doliatus,Barred Antshrike,Aves
+batbel1,,,,0,Procnias nudicollis,Bare-throated Bellbird,Aves
+baymac,,,,0,Ara ararauna,Blue-and-yellow Macaw,Aves
+bbwduc,,,,0,Dendrocygna autumnalis,Black-bellied Whistling Duck,Aves
+bcwfin2,,,,0,Microspingus melanoleucus,Black-capped Warbling Finch,Aves
+bkcdon,,,,0,Donacobius atricapilla,Black-capped Donacobius,Aves
+bkhpar,,,,0,Aratinga nenday,Nanday Parakeet,Aves
+blchaw1,,,,0,Busarellus nigricollis,Black-collared Hawk,Aves
+blheag1,,,,0,Spizaetus tyrannus,Black Hawk-Eagle,Aves
+blttit1,,,,0,Tityra cayana,Black-tailed Tityra,Aves
+bncfly,,,,0,Myiarchus tyrannulus,Brown-crested Flycatcher,Aves
+bobfly1,,,,0,Megarynchus pitangua,Boat-billed Flycatcher,Aves
+brcmar1,,,,0,Progne tapera,Brown-chested Martin,Aves
+brnowl,,,,0,Tyto furcata,American Barn Owl,Aves
+bucmot4,,,,0,Momotus momota,Amazonian Motmot,Aves
+bucpar,,,,0,Thectocercus acuticaudatus,Blue-crowned Parakeet,Aves
+bufpar,,,,0,Amazona aestiva,Turquoise-fronted Amazon,Aves
+bunibi1,1.0,1.0,1.0,4,Theristicus caudatus,Buff-necked Ibis,Aves
+burowl,,,,0,Athene cunicularia,Burrowing Owl,Aves
+camfli1,,,,0,Colaptes campestris,Campo Flicker,Aves
+chacha1,1.0,1.0,1.0,28,Ortalis canicollis,Chaco Chachalaca,Aves
+chbmoc1,,,,0,Mimus saturninus,Chalk-browed Mockingbird,Aves
+chobla1,,,,0,Gnorimopsar chopi,Chopi Blackbird,Aves
+chvcon1,1.0,1.0,1.0,46,Conirostrum speciosum,Chestnut-vented Conebill,Aves
+cibspi1,,,,0,Synallaxis hypospodia,Cinereous-breasted Spinetail,Aves
+coffal1,,,,0,Micrastur semitorquatus,Collared Forest-Falcon,Aves
+compau,0.9224386724386724,1.0,0.3333333333333333,12,Nyctidromus albicollis,Pauraque,Aves
+compot1,,,,0,Nyctibius griseus,Common Potoo,Aves
+crbthr1,,,,0,Turdus amaurochalinus,Creamy-bellied Thrush,Aves
+crebec1,,,,0,Pachyramphus validus,Crested Becard,Aves
+dwatin1,,,,0,Taoniscus nanus,Dwarf Tinamou,Aves
+epaori4,,,,0,Icterus pyrrhopterus,Variable Oriole,Aves
+eulfly1,,,,0,Lathrotriccus euleri,Euler's Flycatcher,Aves
+fabwre1,,,,0,Cantorchilus guarayanus,Fawn-breasted Wren,Aves
+fepowl,,,,0,Glaucidium brasilianum,Ferruginous Pygmy Owl,Aves
+ficman1,,,,0,Machaeropterus pyrocephalus,Fiery-capped Manakin,Aves
+flawar1,,,,0,Myiothlypis flaveola,Flavescent Warbler,Aves
+fotfly,,,,0,Tyrannus savana,Fork-tailed Flycatcher,Aves
+fusfly1,,,,0,Cnemotriccus fuscatus,Fuscous Flycatcher,Aves
+gilhum1,,,,0,Hylocharis chrysura,Gilded Hummingbird,Aves
+giwrai1,,,,0,Aramides ypecaha,Giant Wood Rail,Aves
+glteme1,,,,0,Chionomesa fimbriata,Glittering-throated Emerald,Aves
+grasal3,,,,0,Saltator coerulescens,Bluish-grey Saltator,Aves
+greani1,,,,0,Crotophaga major,Greater Ani,Aves
+greant1,,,,0,Taraba major,Great Antshrike,Aves
+greela,,,,0,Myiopagis viridicata,Greenish Elaenia,Aves
+grekis,,,,0,Pitangus sulphuratus,Great Kiskadee,Aves
+grepot1,,,,0,Nyctibius grandis,Great Potoo,Aves
+gretho2,,,,0,Phacellodomus ruber,Greater Thornbird,Aves
+greyel,,,,0,Tringa melanoleuca,Greater Yellowlegs,Aves
+grfdov1,,,,0,Leptotila rufaxilla,Grey-fronted Dove,Aves
+grhtan1,,,,0,Eucometis penicillata,Grey-headed Tanager,Aves
+gycwor1,,,,0,Aramides cajaneus,Grey-cowled Wood Rail,Aves
+horscr1,,,,0,Anhima cornuta,Horned Screamer,Aves
+houspa,,,,0,Passer domesticus,House Sparrow,Aves
+hyamac1,,,,0,Anodorhynchus hyacinthinus,Hyacinth Macaw,Aves
+larela1,,,,0,Elaenia spectabilis,Large Elaenia,Aves
+lesela1,,,,0,Elaenia chiriquensis,Lesser Elaenia,Aves
+lesgrf1,,,,0,Emberizoides ypiranganus,Lesser Grass-Finch,Aves
+limpki,1.0,1.0,0.6666666666666666,6,Aramus guarauna,Limpkin,Aves
+linwoo1,,,,0,Dryocopus lineatus,Lineated Woodpecker,Aves
+litcuc2,,,,0,Coccycua minuta,Little Cuckoo,Aves
+litnig1,1.0,1.0,1.0,22,Setopagis parvula,Little Nightjar,Aves
+mabpar,,,,0,Pyrrhura frontalis,Maroon-bellied Parakeet,Aves
+magant1,1.0,0.75,1.0,6,Cercomacra melanaria,Mato Grosso Antbird,Aves
+magtan2,,,,0,Cissopis leverianus,Magpie Tanager,Aves
+masgna1,,,,0,Polioptila dumicola,Masked Gnatcatcher,Aves
+nacnig1,,,,0,Chordeiles nacunda,Nacunda Nighthawk,Aves
+ocecra1,,,,0,Rufirallus schomburgkii,Ocellated Crake,Aves
+oliwoo1,,,,0,Sittasomus griseicapillus,Olivaceous Woodcreeper,Aves
+orbtro3,,,,0,Icterus croconotus,Orange-backed Troupial,Aves
+orwpar,1.0,1.0,1.0,4,Amazona amazonica,Orange-winged Amazon,Aves
+osprey,,,,0,Pandion haliaetus,Osprey,Aves
+pabspi1,,,,0,Synallaxis albescens,Pale-breasted Spinetail,Aves
+palhor3,,,,0,Furnarius leucopus,Pale-legged Hornero,Aves
+paltan1,,,,0,Thraupis palmarum,Palm Tanager,Aves
+phecuc1,,,,0,Dromococcyx phasianellus,Pheasant Cuckoo,Aves
+picpig2,,,,0,Patagioenas picazuro,Picazuro Pigeon,Aves
+pirfly1,,,,0,Legatus leucophaius,Piratic Flycatcher,Aves
+plasla1,,,,0,Thamnophilus pelzelni,Planalto Slaty Antshrike,Aves
+platyr1,,,,0,Inezia inornata,Plain Inezia,Aves
+plcjay1,,,,0,Cyanocorax chrysops,Plush-crested Jay,Aves
+pluibi1,,,,0,Theristicus caerulescens,Plumbeous Ibis,Aves
+purjay1,1.0,1.0,1.0,2,Cyanocorax cyanomelas,Purplish Jay,Aves
+pvttyr1,,,,0,Hemitriccus margaritaceiventer,Pearly-vented Tody-Tyrant,Aves
+ragmac1,,,,0,Ara chloropterus,Red-and-green Macaw,Aves
+rebscy1,,,,0,Campylorhamphus trochilirostris,Red-billed Scythebill,Aves
+recfin1,,,,0,Coryphospingus cucullatus,Red-crested Finch,Aves
+redjun,,,,0,Gallus gallus,Red Junglefowl,Aves
+relser1,,,,0,Cariama cristata,Red-legged Seriema,Aves
+rinkin1,,,,0,Megaceryle torquata,Ringed Kingfisher,Aves
+rivwar1,,,,0,Myiothlypis rivularis,Riverbank Warbler,Aves
+roahaw,,,,0,Rupornis magnirostris,Roadside Hawk,Aves
+rubthr1,,,,0,Turdus rufiventris,Rufous-bellied Thrush,Aves
+rufcac2,,,,0,Pseudoseisura unirufa,Rufous Cacholote,Aves
+rufcas2,,,,0,Casiornis rufus,Rufous Casiornis,Aves
+rufgna3,,,,0,Conopophaga lineata,Rufous Gnateater,Aves
+rufhor2,,,,0,Furnarius rufus,Rufous Hornero,Aves
+rufnig1,,,,0,Antrostomus rufus,Rufous Nightjar,Aves
+ruftho1,,,,0,Phacellodomus rufifrons,Rufous-fronted Thornbird,Aves
+ruftof1,,,,0,Poecilotriccus latirostris,Rusty-fronted Tody-Flycatcher,Aves
+rumfly1,,,,0,Myiozetetes cayanensis,Rusty-margined Flycatcher,Aves
+ruther1,1.0,1.0,1.0,2,Tigrisoma lineatum,Rufescent Tiger Heron,Aves
+rutjac1,1.0,1.0,1.0,2,Galbula ruficauda,Rufous-tailed Jacamar,Aves
+sabspa1,,,,0,Arremon flavirostris,Saffron-billed Sparrow,Aves
+saffin,,,,0,Sicalis flaveola,Saffron Finch,Aves
+saytan1,,,,0,Thraupis sayaca,Sayaca Tanager,Aves
+scadov1,,,,0,Columbina squammata,Scaled Dove,Aves
+schpar1,,,,0,Pionus maximiliani,Scaly-headed Parrot,Aves
+scther1,,,,0,Phaethornis eurynome,Scale-throated Hermit,Aves
+shcfly1,,,,0,Myiarchus ferox,Short-crested Flycatcher,Aves
+shshaw,,,,0,Accipiter striatus,Sharp-shinned Hawk,Aves
+shtnig1,,,,0,Lurocalis semitorquatus,Short-tailed Nighthawk,Aves
+sibtan2,,,,0,Ramphocelus carbo,Silver-beaked Tanager,Aves
+smbani,,,,0,Crotophaga ani,Smooth-billed Ani,Aves
+smbtin1,,,,0,Crypturellus parvirostris,Small-billed Tinamou,Aves
+sobcac1,,,,0,Cacicus solitarius,Solitary Cacique,Aves
+sobtyr1,,,,0,Camptostoma obsoletum,Southern Beardless Tyrannulet,Aves
+socfly1,,,,0,Myiozetetes similis,Social Flycatcher,Aves
+sofspi1,,,,0,Synallaxis frontalis,Sooty-fronted Spinetail,Aves
+souant1,,,,0,Corythopis delalandi,Southern Antpipit,Aves
+soulap1,,,,0,Vanellus chilensis,Southern Lapwing,Aves
+souscr1,,,,0,Chauna torquata,Southern Screamer,Aves
+spbant3,,,,0,Hypoedaleus guttatus,Spot-backed Antshrike,Aves
+spispi1,,,,0,Synallaxis spixi,Spix's Spinetail,Aves
+sptnig1,,,,0,Antiurus maculicaudus,Spot-tailed Nightjar,Aves
+squcuc1,,,,0,Piaya cayana,Common Squirrel-Cuckoo,Aves
+stbwoo2,,,,0,Dendroplex picus,Straight-billed Woodcreeper,Aves
+strcuc1,,,,0,Tapera naevia,Striped Cuckoo,Aves
+strher2,,,,0,Butorides striata,Striated Heron,Aves
+strowl1,,,,0,Asio clamator,Striped Owl,Aves
+swthum1,,,,0,Eupetomena macroura,Swallow-tailed Hummingbird,Aves
+swtman1,,,,0,Chiroxiphia caudata,Swallow-tailed Manakin,Aves
+tattin1,,,,0,Crypturellus tataupa,Tataupa Tinamou,Aves
+thlwre1,,,,0,Campylorhynchus turdinus,Thrush-like Wren,Aves
+toctou1,,,,0,Ramphastos toco,Toco Toucan,Aves
+trokin,,,,0,Tyrannus melancholicus,Tropical Kingbird,Aves
+trsowl,,,,0,Megascops choliba,Tropical Screech Owl,Aves
+undtin1,1.0,1.0,0.9375,32,Crypturellus undulatus,Undulated Tinamou,Aves
+varant1,,,,0,Thamnophilus caerulescens,Variable Antshrike,Aves
+watjac1,,,,0,Jacana jacana,Wattled Jacana,Aves
+wesfie1,,,,0,Pyriglena maura,Western Fire-eye,Aves
+wfwduc1,,,,0,Dendrocygna viduata,White-faced Whistling Duck,Aves
+whbant2,,,,0,Biatas nigropectus,White-bearded Antshrike,Aves
+whbwar2,,,,0,Myiothlypis leucoblephara,White-browed Warbler,Aves
+whiwoo1,,,,0,Melanerpes candidus,White Woodpecker,Aves
+whlspi1,,,,0,Synallaxis albilora,White-lored Spinetail,Aves
+whnjay1,,,,0,Cyanocorax cyanopogon,White-naped Jay,Aves
+whtdov,0.9999999999999999,1.0,0.9583333333333334,48,Leptotila verreauxi,White-tipped Dove,Aves
+whwpic1,,,,0,Picumnus albosquamatus,White-wedged Piculet,Aves
+y00678,,,,0,Caracara plancus,Crested Caracara,Aves
+yebcar,,,,0,Paroaria capitata,Yellow-billed Cardinal,Aves
+yebela1,,,,0,Elaenia flavogaster,Yellow-bellied Elaenia,Aves
+yecmac,,,,0,Primolius auricollis,Golden-collared Macaw,Aves
+yecpar,,,,0,Brotogeris chiriri,Yellow-chevroned Parakeet,Aves
+yehcar1,,,,0,Daptrius chimachima,Yellow-headed Caracara,Aves
+yeofly1,,,,0,Tolmomyias sulphurescens,Yellow-olive Flatbill,Aves

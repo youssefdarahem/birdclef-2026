@@ -1,0 +1,41 @@
+# ── Competition audio data (11 GB+ of OGG files) ─────────────────────────────
+train_audio/
+train_soundscapes/
+test_soundscapes/*.ogg
+
+# ── Model weights (large binaries, not suitable for git) ──────────────────────
+checkpoints/**/*.pt
+checkpoints/*.pt
+
+# Keep lightweight analysis outputs that live alongside checkpoints
+!checkpoints/**/analysis.png
+!checkpoints/**/per_class_metrics.csv
+
+# ── Generated submission CSVs ─────────────────────────────────────────────────
+submissions/
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Environments & package managers ──────────────────────────────────────────
+.env
+.venv
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# ── OS / editor artefacts ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
