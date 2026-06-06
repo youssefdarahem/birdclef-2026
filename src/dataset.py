@@ -82,7 +82,10 @@ class SoundscapeDataset(Dataset):
         waveform = crop_or_pad(waveform, self.cfg.clip_samples, offset=offset_samples)
         log_mel = waveform_to_logmel(waveform, self.mel)
 
-        label = labels_to_multihot(seg["labels"])
+        if "soft_label" in seg:
+            label = seg["soft_label"]
+        else:
+            label = labels_to_multihot(seg["labels"])
 
         if self.augment is not None:
             log_mel, label = self.augment(log_mel, label)
@@ -93,17 +96,24 @@ class SoundscapeDataset(Dataset):
 def _parse_soundscape_labels(csv_path: Path, cfg: Config) -> list[dict]:
     """Convert train_soundscapes_labels.csv rows into segment dicts."""
     df = pd.read_csv(csv_path)
+    has_soft = "soft_probs" in df.columns
     segments = []
     for _, row in df.iterrows():
         start_str = str(row["start"])      # e.g. "00:00:00"
         h, m, s = start_str.split(":")
         start_sec = int(h) * 3600 + int(m) * 60 + int(s)
         labels = _parse_label_list(row["primary_label"])
-        segments.append({
+        seg = {
             "filename": row["filename"],
             "start_sample": start_sec * cfg.sample_rate,
             "labels": [str(l) for l in labels],
-        })
+        }
+        if has_soft and pd.notna(row.get("soft_probs")):
+            seg["soft_label"] = torch.tensor(
+                [float(x) for x in str(row["soft_probs"]).split(",")],
+                dtype=torch.float32,
+            )
+        segments.append(seg)
     return segments
 
 
@@ -113,25 +123,36 @@ def build_datasets(cfg: Config, augment=None):
 
     # --- Individual recordings ---
     bird_df = pd.read_csv(cfg.train_csv)
+    if cfg.min_rating > 0 and "rating" in bird_df.columns:
+        bird_df = bird_df[bird_df["rating"] >= cfg.min_rating]
     if cfg.debug:
         bird_df = bird_df.sample(min(cfg.max_debug_samples, len(bird_df)), random_state=cfg.seed)
 
     mel = build_mel_transform(cfg)
 
     # --- Soundscape segments ---
-    segments = _parse_soundscape_labels(cfg.soundscape_labels_csv, cfg)
+    # Val always uses original human labels (never pseudo-labels) for clean evaluation
+    orig_segs = _parse_soundscape_labels(cfg.val_soundscape_labels_csv, cfg)
     if cfg.debug:
-        segments = segments[: cfg.max_debug_samples]
+        orig_segs = orig_segs[: cfg.max_debug_samples]
 
     # Soundscape-level val split (hold out whole files to avoid leakage)
-    all_sc_files = list({s["filename"] for s in segments})
+    all_sc_files = list({s["filename"] for s in orig_segs})
     random.shuffle(all_sc_files)
     n_val = max(1, int(len(all_sc_files) * cfg.val_split))
-    val_files = set(all_sc_files[:n_val])
+    val_files      = set(all_sc_files[:n_val])
     train_sc_files = set(all_sc_files[n_val:])
 
-    train_segs = [s for s in segments if s["filename"] in train_sc_files]
-    val_segs   = [s for s in segments if s["filename"] in val_files]
+    val_segs = [s for s in orig_segs if s["filename"] in val_files]
+
+    # Training uses pseudo-labels CSV if provided, original otherwise
+    if cfg.soundscape_labels_csv != cfg.val_soundscape_labels_csv:
+        all_train_segs = _parse_soundscape_labels(cfg.soundscape_labels_csv, cfg)
+        if cfg.debug:
+            all_train_segs = all_train_segs[: cfg.max_debug_samples]
+    else:
+        all_train_segs = orig_segs
+    train_segs = [s for s in all_train_segs if s["filename"] in train_sc_files]
 
     train_bird = BirdDataset(bird_df, cfg, mel, augment=augment)
     train_sc   = SoundscapeDataset(train_segs, cfg, mel, augment=augment)
@@ -153,6 +174,8 @@ def build_dataloaders(cfg: Config, augment=None):
 
     # Weighted sampler for individual recordings (handle class imbalance)
     bird_df = pd.read_csv(cfg.train_csv)
+    if cfg.min_rating > 0 and "rating" in bird_df.columns:
+        bird_df = bird_df[bird_df["rating"] >= cfg.min_rating]
     if cfg.debug:
         bird_df = bird_df.sample(min(cfg.max_debug_samples, len(bird_df)), random_state=cfg.seed)
     sample_weights = build_class_weights(bird_df)

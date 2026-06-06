@@ -50,6 +50,7 @@ class Config:
     train_csv: Path = ROOT / "train.csv"
     taxonomy_csv: Path = ROOT / "taxonomy.csv"
     soundscape_labels_csv: Path = ROOT / "train_soundscapes_labels.csv"
+    val_soundscape_labels_csv: Path = ROOT / "train_soundscapes_labels.csv"  # always original, never overridden
     sample_submission_csv: Path = ROOT / "sample_submission.csv"
     checkpoints_dir: Path = ROOT / "checkpoints"
     submissions_dir: Path = ROOT / "submissions"
@@ -89,6 +90,9 @@ class Config:
 
     # Inference
     inference_overlap: float = 0.0      # 0 = non-overlapping 5s windows (matches submission format)
+
+    # Data quality
+    min_rating: float = 0.0              # filter train_audio clips below this rating (0 = keep all)
 
     # Experiment
     experiment_name: str = "exp001_baseline"

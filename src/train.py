@@ -17,6 +17,7 @@ from pathlib import Path
 
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from torch.amp import GradScaler
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import CosineAnnealingLR
@@ -27,6 +28,12 @@ from dataset import build_dataloaders
 from augmentation import Augmentation, batch_mixup
 from evaluate import evaluate
 from models import build_model
+
+
+def focal_bce_loss(logits: torch.Tensor, targets: torch.Tensor, gamma: float = 2.0) -> torch.Tensor:
+    bce = F.binary_cross_entropy_with_logits(logits, targets, reduction="none")
+    p_t = torch.sigmoid(logits) * targets + (1 - torch.sigmoid(logits)) * (1 - targets)
+    return ((1 - p_t) ** gamma * bce).mean()
 
 
 def get_warmup_lr(step: int, warmup_steps: int, base_lr: float) -> float:
@@ -47,6 +54,7 @@ def train_one_epoch(
     epoch: int,
     total_steps_so_far: int,
     warmup_steps: int,
+    focal_gamma: float = 0.0,
 ) -> tuple[float, int]:
     model.train()
     total_loss = 0.0
@@ -94,7 +102,10 @@ def train_one_epoch(
         optimizer.zero_grad(set_to_none=True)
         with torch.amp.autocast(device_type="cuda", enabled=device.type == "cuda"):
             logits = model(specs)
-            loss   = criterion(logits, labels)
+            if focal_gamma > 0:
+                loss = focal_bce_loss(logits, labels, gamma=focal_gamma)
+            else:
+                loss = criterion(logits, labels)
 
         scaler.scale(loss).backward()
         scaler.unscale_(optimizer)
@@ -121,6 +132,12 @@ def main():
                         help="Path to local CNN14 .pth file (skips auto-download)")
     parser.add_argument("--unfreeze-epoch", default=None, type=int, dest="unfreeze_epoch",
                         help="Epoch at which to unfreeze all layers (AST phase-2 fine-tuning)")
+    parser.add_argument("--pseudo-labels",  default=None, dest="pseudo_labels",
+                        help="Path to merged pseudo-labels CSV (output of pseudo_label.py)")
+    parser.add_argument("--focal-gamma",   type=float, default=0.0, dest="focal_gamma",
+                        help="Focal loss gamma (0 = standard BCE, 2.0 recommended)")
+    parser.add_argument("--min-rating",    type=float, default=0.0, dest="min_rating",
+                        help="Minimum clip rating to include from train_audio (0 = keep all)")
     args = parser.parse_args()
 
     cfg = Config()
@@ -130,9 +147,18 @@ def main():
     if args.batch      is not None: cfg.batch_size  = args.batch
     if args.experiment is not None: cfg.experiment_name = args.experiment
     if args.debug:                  cfg.debug = True
+    if args.pseudo_labels:
+        from pathlib import Path as _Path
+        p = _Path(args.pseudo_labels)
+        cfg.soundscape_labels_csv = p if p.is_absolute() else cfg.data_dir / p
+        print(f"Using pseudo-labels: {cfg.soundscape_labels_csv}")
+    if args.min_rating > 0:
+        cfg.min_rating = args.min_rating
+        print(f"Rating filter: >= {cfg.min_rating}")
 
+    focal_gamma = args.focal_gamma
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Device: {device}  |  Model: {cfg.model_name}  |  Experiment: {cfg.experiment_name}")
+    print(f"Device: {device}  |  Model: {cfg.model_name}  |  Experiment: {cfg.experiment_name}  |  Focal γ={focal_gamma}")
 
     augment = Augmentation(cfg)
     bird_loader, sc_loader, val_loader = build_dataloaders(cfg, augment=augment)
@@ -186,6 +212,7 @@ def main():
             model, bird_loader, sc_loader,
             optimizer, scaler, criterion, cfg,
             device, epoch, steps_so_far, warmup_steps,
+            focal_gamma=focal_gamma,
         )
 
         if epoch > cfg.warmup_epochs:
